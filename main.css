@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Rock+Salt&display=swap');
+:root{
+    --main-color:rgb(19, 16, 16);
+    --text-color:rgb(223, 208, 184);
+    --third-color:rgb(196, 217, 255);
+    --secondary-color:#C5BAFF;
+    --button-color:rgb(82, 37, 70);
+    
+}
+*{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;/* Remove default margin */ /* Remove default padding */ /* Full viewport height */ /* Prevent horizontal scrolling */
+    background-color: var(--main-color); /* Background color */
+    padding-bottom: 100px;
+    scroll-behavior: smooth; /* Center content horizontally */
+}
+.header {
+    color: var(--text-color);
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    background-color: var(--main-color); /* Adjust height for smaller screens */
+}
+.logo h1 {
+    display: inline-block;
+    position: relative; /* Required for the ::after pseudo-element */
+    font-size: 30px; /* Adjust font size as needed */
+    text-align: center; /* Add a pointer cursor *//* Smooth transition for color change */
+}
+
+.logo h1::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: beige; /* Beige color for the underline */
+    box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animation starts from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+} /* Change text color on hover */
+
+.logo h1:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+   
+}
+.nav div:hover {
+    background-color: white; /* Changes background to black */ /* Changes text color to white */
+    color: black;
+    border-radius: 50px 50px; 
+    padding: 10px;
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-image{
+    width: 500px; /* Adjust the width for medium size */
+    height: 500px; /* Adjust the height for medium size */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    padding: 30px;
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 50px; 
+
+}
+.portfolio-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto; /* Center the container */
+    margin-bottom: 90px;
+    background:transparent var(--secondary-color); /* Semi-transparent background for the blur effect */
+    backdrop-filter: blur(70px); /* Applies the blur effect */
+    border-radius: 15px; /* Optional: Adds rounded corners */
+    box-shadow: var(--third-color)
+}
+.about-me{
+    max-width: 600px; /* Limits the width of the text */
+     /* Aligns text to the left */
+    color: var(--text-color);
+    font-size: 20px; /* Adjsts the font size */ 
+    margin-right: 30px; /* Adds space to the right of the text */
+}
+.about-me h2 {
+    position: relative; /* Required for the ::after pseudo-element */
+    display: inline-block; /* Ensures the underline is only as wide as the text */
+    color: var(--text-color);
+    font-size: 30px; /* Adjust font size as needed */
+    text-align: center; /* Optional: Add a pointer cursor */
+}
+
+.about-me h2::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: beige; /* Beige color for the underline */
+    box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animation starts from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.about-me h2:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+.about-me span{
+    color: var(--third-color);
+}
+.resume,.hireme{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color:var(--button-color);
+    color: var(--text-color);
+}
+.resume:hover,.hireme:hover {
+    padding: 10px;
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.normal{
+    display: none;
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Skills {
+    width: 100%; /* Full width */
+    margin-top: 40px; /* Add spacing above Skills */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Optional: Add shadow */
+}
+.Skills h2{   
+     color: var(--text-color);
+     font-size: 50px;
+     display:inline-block;
+     position: relative;
+     padding: 20px;
+     margin: 12px;
+}
+.Skills h2::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    margin-left: 12px;
+    bottom: 20px; ; /* Position the underline slightly below the text */
+    width: 85%; /* Full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: beige; /* Beige color for the underline */
+    box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animation starts from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.Skills h2:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+.skillset{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+}
+.skillset .cards{
+    border: none;
+    height: 70px;
+    width: 80px;
+    box-shadow: 5px 0px 20px 0px #C5BAFF;
+    padding:10px;
+    text-align: center;
+
+}
+.skillset .cards:hover {
+     /* Changes background to black */ /* Changes text color to white */
+    border-radius: 5px 5px; 
+    padding: 10px;
+    transform: scale(1.1) translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skillset .React{
+    /* Add hover styles here if needed */
+    background-image: url("./src/icons/image.png");
+    background-size: 60px; /* Scale the image to fit */
+    background-position:bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+     /* Adjust the height for smaller screens */
+}
+.skillset .html{
+    background-image: url("./src/icons/5847f5bdcef1014c0b5e489c.png");
+    background-size: 60px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .css{
+    background-image: url("./src/icons/d8d635fbfcd76e2314ebb60e437d4839.png");
+    background-size: 50px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .JavaScript{
+    background-image: url("./src/icons/478d85330087acd75c9ffa664f61071c.png");
+    background-size: 75px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .Node{
+    background-image: url("./src/icons/c0025301686f0b92ed703240859b3b1a.png");
+    background-size: 60px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .Express{
+    background-image: url("./src/icons/a791bf601b4457fe9077ac8b35cab835.png");
+    background-size: 120px; /* Scale the image to fit */
+    background-position: bottom;
+     /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .mangodb{
+    background-image: url("./src/icons/pngwing.com.png");
+    background-size: 50px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.skillset .git{
+    background-image: url("./src/icons/pngwing.com\ \(2\).png");
+    background-size: 50px; /* Scale the image to fit */
+    background-position: bottom; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+body.no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Ensure the body doesn't scroll */
+}
+.projects {
+    width: 100%; /* Full width */
+    margin-bottom: 40px; /* Add spacing below Projects */
+    padding: 20px; /* Add padding for spacing */
+    background-color: var(--main-color); /* Optional: Add a background color */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    position: relative;/* Keep it in the normal document flow */
+}
+.projects h2{
+   color: var(--text-color);
+   font-size: 50px;
+   position: relative;
+   display: inline-block;
+    /* Ensures the underline is only as wide as the text */
+    /* Adjust font size */ /* Center the heading */
+}
+.projects h2::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: beige; /* Beige color for the underline */
+    box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animation starts from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.projects h2:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
+}
+.project-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Adds spacing between items */
+    flex-direction: row; /* Align items in a row */
+    height: 200px;
+    width: 100%; /* Add spacing between Projects and the project cards */
+}
+.card{
+    height: 160px; /* Adjust card height */
+    width: 200px; /* Adjust card width */
+    box-shadow: 5px 0px 20px 0px #C5BAFF; /* Add shadow for better visibility */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-size: cover; /* Ensure the image covers the card */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text inside the card */
+    color: var(--text-color); /* Text color */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Slightly enlarge the card on hover */
+    box-shadow: 5px 5px 25px 0px #C5BAFF; /* Enhance shadow on hover */
+}
+.card h3{
+    color: var(--text-color); /* Text color */
+    font-size: 10x; /* Adjust font size */
+    align-items: start;
+    position: relative;
+    bottom: 100px;
+    margin: 0; /* Remove default margin */
+    padding: 10px;
+    text-align: center; /* Add padding for spacing */
+}
+
+.card.blog {
+    background-image: url("./src/project/blog.png");
+}
+
+.card.book {
+    background-image: url("./src/project/book.png");
+}
+.blog img{
+    width: 100%; /* Full width of the card */
+    height: 90px; /* Full height of the card */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    object-fit: cover;
+    background-position: center;
+     /* Ensure the image covers the card without distortion */
+}
+
+a {
+    text-decoration: none; /* Ensure underline is applied */
+    color: var(--text-color); /* Set the link color */
+    transition: color 0.3s ease; /* Add a smooth transition for hover effects */
+}
+
+a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+    text-decoration: underline; /* Keep underline on hover */
+}
+.footer-content {
+    position: relative; /* Default positioning */
+    width: 100%; /* Full width of the footer */
+    background-color: var(--main-color); /* Background color for the footer */
+    color: var(--text-color); /* Text color for the footer */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 40px; /* Add spacing above the footer */
+}
+
+.footer-content h2 {
+    font-size: 40px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.footer-content p {
+    color: var(--text-color);
+    margin: 10px 0; /* Add spacing between paragraphs */
+}
+
+.footer-content .social-media {
+    display: flex;
+    justify-content: center; /* Center social media icons */
+    align-items: center;
+    gap: 20px; /* Add spacing between icons */
+    flex-direction: row; /* Align items in a row */
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .normal{
+        display: flex;
+        position: relative;
+        margin-right: 20px;
+        border: none;
+        font-size: 2rem;
+        background-color: var(--main-color);
+        color: var(--text-color);
+    }
+    .nav{
+        display: none;
+    }
+    .nav.active {
+        display: flex; /* Show nav when active */
+        flex-direction: column; /* Stack nav items vertically */
+        position: fixed; /* Position it absolutely */
+        align-items: center;
+        top: 440px; /* Center vertically */
+        left: 50%;
+        z-index: 999;
+        height: 100%; /* Full height for the nav */
+        transform: translate(-50%, -50%);
+        width: 100%;/* Full height for the nav */ /* Full width for smaller screens */
+        gap: 20px; /* Adds spacing between items */
+        background-color: var(--main-color);
+        /* Smooth transition */
+    }
+    .header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Adjust height for smaller screens */
+        background-color: var(--main-color);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text for the about section */
+        padding: 20px; /* Add padding for spacing */
+        gap: 20px; /* Adds spacing between items */
+        margin: 0 auto; /* Center the container horizontally */
+        width: 90%; /* Adjust width for smaller screens */
+        margin-top: 70px; /* Add margin to account for the header height */
+    }
+
+    .portfolio-image {
+        margin: 0 auto; /* Center the image */
+        margin-bottom: 20px; /* Add spacing below the image */
+        width: 250px; /* Adjust the width for smaller screens */
+        height: 250px; /* Adjust the height for smaller screens */
+        padding: 10px;
+        object-fit: cover; /* Ensure the image scales properly */
+    }
+    .Skills{
+        height: 100svh;
+    }
+    .skillset{
+       height: 400px; 
+    }
+
+    .about-me {
+        margin: 0; /* Remove side margins */
+        max-width: 90%; /* Adjust width for smaller screens */
+        text-align: center; /* Center the text */
+    }
+   
+}
