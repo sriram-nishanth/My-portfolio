@@ -15,14 +15,14 @@
 }
 body { 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;/* Remove default margin */ /* Remove default padding */ /* Full viewport height */ /* Prevent horizontal scrolling */
     background-color: var(--main-color); /* Background color */
     padding-bottom: 100px;
     scroll-behavior: smooth;
-    margin: 20px;
-    padding:20px ; /* Center content horizontally */
+    padding-left: 40px;
+    padding-right:40px ; /* Center content horizontally */
 }
 .header {
     color: var(--text-color);
@@ -467,7 +467,7 @@ body.no-scroll {
         top: 0;
         left: 0;
         width: 100%;
-        height: 50px; /* Adjust height for smaller screens */
+        height: 40px; /* Adjust height for smaller screens */
         background-color: var(--main-color);
         z-index: 1000;
         display: flex;
