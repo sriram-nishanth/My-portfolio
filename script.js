@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function getResume() {
     const resume = document.getElementById("resume");
     if (resume) {
