@@ -121,7 +121,7 @@ a{
     display: inline-block; /* Ensures the underline is only as wide as the text */
     color: var(--text-color);
     font-size: 30px; /* Adjust font size as needed */
-    text-align: center; /* Optional: Add a pointer cursor */
+    text-align: justify; /* Optional: Add a pointer cursor */
 }
 
 .about-me h2::after {
@@ -136,6 +136,9 @@ a{
     transform: scaleX(0); /* Initially hidden */
     transform-origin: left; /* Animation starts from the left */
     transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.about-me p{
+    text-align: justify;
 }
 
 .about-me h2:hover::after {
@@ -180,8 +183,6 @@ a{
      font-size: 50px;
      display:inline-block;
      position: relative;
-     padding: 20px;
-     margin: 12px;
 }
 .Skills h2::after {
     content: ""; /* Creates the underline */
@@ -432,6 +433,9 @@ body.no-scroll {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
+    body{
+       padding: 0%; /* Adjust padding for smaller screens */
+    }
     .normal{
         display: flex;
         position: relative;
