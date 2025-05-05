@@ -15,12 +15,14 @@
 }
 body { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;/* Remove default margin */ /* Remove default padding */ /* Full viewport height */ /* Prevent horizontal scrolling */
     background-color: var(--main-color); /* Background color */
     padding-bottom: 100px;
-    scroll-behavior: smooth; /* Center content horizontally */
+    scroll-behavior: smooth;
+    margin: 20px;
+    padding:20px ; /* Center content horizontally */
 }
 .header {
     color: var(--text-color);
@@ -69,6 +71,7 @@ body {
     gap: 20px;
    
 }
+
 .nav div:hover {
     background-color: white; /* Changes background to black */ /* Changes text color to white */
     color: black;
@@ -76,6 +79,11 @@ body {
     padding: 10px;
     transform: scale(1.1) translateY(-5px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+a{
+    text-decoration: none; /* Ensure underline is applied */
+    color: var(--text-color); /* Set the link color */
+    transition: color 0.3s ease; /* Add a smooth transition for hover effects */
 }
 .portfolio-image{
     width: 500px; /* Adjust the width for medium size */
@@ -198,9 +206,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
     gap: 60px;
     flex-direction: row;
-    height: auto;
+    height: 100px;
     width: 100%;
 }
 .skillset .cards{
@@ -314,7 +323,7 @@ body.no-scroll {
     flex-wrap: wrap;
     gap: 40px; /* Adds spacing between items */
     flex-direction: row; /* Align items in a row */
-    height: 200px;
+    height: 400px;
     width: 100%; /* Add spacing between Projects and the project cards */
 }
 .card{
@@ -366,13 +375,12 @@ body.no-scroll {
      /* Ensure the image covers the card without distortion */
 }
 
-a {
+.project-cards a{
     text-decoration: none; /* Ensure underline is applied */
     color: var(--text-color); /* Set the link color */
     transition: color 0.3s ease; /* Add a smooth transition for hover effects */
 }
-
-a:hover {
+.project-cards a:hover {
     color: var(--secondary-color); /* Change color on hover */
     text-decoration: underline; /* Keep underline on hover */
 }
@@ -389,7 +397,25 @@ a:hover {
 .footer-content h2 {
     font-size: 40px; /* Adjust font size */
     margin: 0; /* Remove default margin */
-    padding: 10px; /* Add padding for spacing */
+    padding: 10px;
+    position: relative;
+    display: inline-block; /* Add padding for spacing */
+}
+.footer-content h2::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the text */
+    height: 3px; /* Thickness of the underline */
+    background-color: beige; /* Beige color for the underline */
+    box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center; /* Animation starts from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.footer-content h2:hover::after {
+    transform: scaleX(1); /* Expand the underline on hover */
 }
 
 .footer-content p {
@@ -420,7 +446,10 @@ a:hover {
     }
     .nav.active {
         display: flex; /* Show nav when active */
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
+    
+        align-items: stretch;
+        align-content: end; /* Stack nav items vertically */
         position: fixed; /* Position it absolutely */
         align-items: center;
         top: 440px; /* Center vertically */
@@ -429,7 +458,7 @@ a:hover {
         height: 100%; /* Full height for the nav */
         transform: translate(-50%, -50%);
         width: 100%;/* Full height for the nav */ /* Full width for smaller screens */
-        gap: 20px; /* Adds spacing between items */
+         gap: 80px;/* Adds spacing between items */
         background-color: var(--main-color);
         /* Smooth transition */
     }
@@ -478,6 +507,9 @@ a:hover {
         margin: 0; /* Remove side margins */
         max-width: 90%; /* Adjust width for smaller screens */
         text-align: center; /* Center the text */
+    }
+    .project-cards{
+        height: 50vh;
     }
    
 }

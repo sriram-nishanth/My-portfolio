@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="header">
+        <div class="logo">
+           <h1>MY PORTFOILO</h1>
+        </div>
+        <button class="normal" onclick="toggleNav()">☰</button>
+        <div class="nav">
+        <a href="#Home"><div class="home">HOME</div></a>
+        <a href="#Skill"><div class="skill">SKILLS</div></a>
+        <a href="#projects"><div class="Projects">PROJECTS</div></a>
+        <a href="#contactus"><div class="contactus">CONTACT US</div></a>
+    </div>  
+    </div>
+    <div id="Home"class="portfolio-container">
+        <img src="./src/pexels-brenoanp-442535-1136575.jpg" alt="Portfolio Image" class="portfolio-image">
+        <div class="about-me">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm <span>Sriram Nishanth</span> passionate web developer with a strong focus on creating responsive, user-friendly, and visually appealing websites. 
+                With expertise in HTML, CSS, JavaScript, and modern frameworks, I strive to bring ideas to life through clean and efficient code.
+            </p>
+            <p>
+                I enjoy solving complex problems, learning new technologies, and collaborating with others to build impactful digital experiences. 
+                Whether it's designing a portfolio, developing an e-commerce platform, or optimizing website performance, I am dedicated to delivering excellence.
+            </p>
+            <button onclick="getResume()" class="resume">Download Resume</button>
+            <a href="./src/Minimal_CV_Template (3).pdf" id="resume" style="display:none;" download></a>
+            <button class="hireme">Hire Me</button>
+        </div>
+    </div>
+    <div id="Skill" class="Skills">
+        <h2>Skills</h2>
+        <div class="skillset">
+            <div class="cards html">HTML</div>
+            <div class="cards css">CSS</div>
+            <div class="cards JavaScript">JavaScript</div>
+            <div class="cards React">React</div>
+            <div class="cards Node">Node.js</div>
+            <div class="cards Express">Express.js</div>
+            <div class="cards mangodb">MongoDB</div>
+            <div class="cards git">Git</div>
+        </div>
+    </div>
+    <div id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <a href="https://github.com/sriram-nishanth/Blog-project.git"><div class="card blog">
+                <h3>SIMPLE BLOG WEBSITE</h3>
+            </div></a>
+            <a href="https://github.com/sriram-nishanth/Book-project.git"><div class="card book">
+                <h3>BOOK EXPLORE</h3>
+            </div></a>
+        </div>
+    </div>    
+</body>
+<footer>
+    <div id="contactus" class="footer-content">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/sriram-nishanth-t-19501028b/"><img src="./src/icons/[CITYPNG.COM]HD Vector Flat Linkedin IN Round Icon PNG - 2000x2000.png" alt="linkedin" height="50px" width="50px"></a>
+            <a id="gmail-link" href="mailto:sriramnishanth2003@gmail.com">
+                <img src="./src/icons/vecteezy_gmail-png-icon_16716465.png" alt="gmail" height="40px" width="40px">
+            </a>
+          </div>
+     </footer>
+<script src="./script.js"></script>
+</html>
