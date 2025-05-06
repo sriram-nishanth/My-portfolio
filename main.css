@@ -187,10 +187,10 @@ a{
 .Skills h2::after {
     content: ""; /* Creates the underline */
     position: absolute;
-    left: 0;
+    left: -10px;
     margin-left: 12px;
-    bottom: 20px; ; /* Position the underline slightly below the text */
-    width: 85%; /* Full width of the text */
+    bottom: 0px; ; /* Position the underline slightly below the text */
+    width: 100%; /* Full width of the text */
     height: 3px; /* Thickness of the underline */
     background-color: beige; /* Beige color for the underline */
     box-shadow: 0 2px 5px rgba(245, 245, 220, 0.8); /* Beige shadow */
