@@ -383,15 +383,12 @@ body.no-scroll {
 
 .card.book {
     background-image: url("./src/project/book.png");
+     /* Ensure the image covers the card */
 }
-.blog img{
-    width: 100%; /* Full width of the card */
-    height: 90px; /* Full height of the card */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    object-fit: cover;
-    background-position: center;
-     /* Ensure the image covers the card without distortion */
+.book{
+    object-fit:contain;;
 }
+ 
 
 .project-cards a{
     text-decoration: none; /* Ensure underline is applied */
