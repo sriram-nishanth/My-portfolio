@@ -1,16 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const loadingScreen = document.querySelector(".loading-screen");
-
-    // Add a delay before hiding the loading screen
-    setTimeout(() => {
-        loadingScreen.style.opacity = "0"; // Fade out the loading screen
-        loadingScreen.style.transition = "opacity 1s ease"; // Smooth fade-out effect
-
-        // Remove the loading screen from the DOM after the fade-out
-        setTimeout(() => {
-            loadingScreen.style.display = "none";
-        }, 1000); // Match the duration of the fade-out effect
-    }, 2000); // Delay of 2 seconds before starting the fade-out
+$(window).on("load", function() {
+    const loader = $('.loading-screen');
+    loader.fadeOut("very slow");
 });
 
 function getResume() {
