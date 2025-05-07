@@ -1,6 +1,6 @@
 $(window).on("load", function() {
     const loader = $('.loading-screen');
-    loader.fadeOut("very slow");
+    loader.fadeOut(2000)
 });
 
 function getResume() {

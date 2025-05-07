@@ -30,7 +30,6 @@ body {
     left: 0; /* Align to the left */
     width: 100%; /* Full width */
     height: 100vh; /* Full height */
-    background-image: url("./src/icons/Animation - 1746592728415.gif");
     background-repeat: no-repeat; /* Prevent the image from repeating */ /* Ensure the image scales properly */
     background-color: var(--main-color); /* Background color */
     z-index: 20000;
