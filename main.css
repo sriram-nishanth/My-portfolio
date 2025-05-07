@@ -24,6 +24,22 @@ body {
     padding-left: 40px;
     padding-right:40px ; /* Center content horizontally */
 }
+.loading-screen{
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-image: url("./src/icons/Animation - 1746592728415.gif");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-color: var(--main-color); /* Background color */
+    z-index: 20000;
+    background-position: center; /* Ensure it's on top of other elements */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 .header {
     color: var(--text-color);
     display: flex;

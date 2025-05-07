@@ -1,3 +1,7 @@
+var loading = document.querySelector(".loading-screen");
+window.addEventListener("load", function() {
+ loading.style.display = "none"; // Hide the loading screen when the page is fully loaded
+})
 
 function getResume() {
     const resume = document.getElementById("resume");
