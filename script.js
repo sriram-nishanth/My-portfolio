@@ -1,7 +1,17 @@
-var loading = document.querySelector(".loading-screen");
-window.addEventListener("load", function() {
- loading.style.display = "none"; // Hide the loading screen when the page is fully loaded
-})
+window.addEventListener("load", () => {
+    const loadingScreen = document.querySelector(".loading-screen");
+
+    // Add a delay before hiding the loading screen
+    setTimeout(() => {
+        loadingScreen.style.opacity = "0"; // Fade out the loading screen
+        loadingScreen.style.transition = "opacity 1s ease"; // Smooth fade-out effect
+
+        // Remove the loading screen from the DOM after the fade-out
+        setTimeout(() => {
+            loadingScreen.style.display = "none";
+        }, 1000); // Match the duration of the fade-out effect
+    }, 2000); // Delay of 2 seconds before starting the fade-out
+});
 
 function getResume() {
     const resume = document.getElementById("resume");

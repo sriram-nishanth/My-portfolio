@@ -32,12 +32,15 @@ body {
     height: 100vh; /* Full height */
     background-image: url("./src/icons/Animation - 1746592728415.gif");
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: contain; /* Ensure the image scales properly */
     background-color: var(--main-color); /* Background color */
     z-index: 20000;
     background-position: center; /* Ensure it's on top of other elements */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 1s ease; /* Smooth fade-out effect */
 }
 
 .header {
