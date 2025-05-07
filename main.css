@@ -36,9 +36,7 @@ body {
     background-position: center; /* Ensure it's on top of other elements */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    opacity: 1; /* Fully visible by default */
-    transition: opacity 1s ease; /* Smooth fade-out effect */
+    align-items: center; /* Center vertically */ /* Fully visible by default */ /* Smooth fade-out effect */
 }
 
 .header {

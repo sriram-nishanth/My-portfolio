@@ -1,6 +1,6 @@
 $(window).on("load", function() {
     const loader = $('.loading-screen');
-    loader.fadeOut(1000)
+    loader.fadeOut(1000);
 });
 
 function getResume() {
