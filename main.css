@@ -386,7 +386,9 @@ body.no-scroll {
 .book{
     object-fit:contain;;
 }
- 
+.card.chat-app{
+    background-image: url("./src/project/Screenshot\ \(82\).png");
+}
 
 .project-cards a{
     text-decoration: none; /* Ensure underline is applied */
