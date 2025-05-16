@@ -22,7 +22,8 @@ body {
     padding-bottom: 100px;
     scroll-behavior: smooth;
     padding-left: 40px;
-    padding-right:40px ; /* Center content horizontally */
+    padding-right:40px ;
+    overflow-x: hidden; /* Center content horizontally */
 }
 .loading-screen{
     position: fixed; /* Fixed position to cover the entire viewport */
@@ -527,7 +528,7 @@ body.no-scroll {
         text-align: center; /* Center the text */
     }
     .project-cards{
-        height: 50vh;
+        height: 80vh;
     }
    
 }
