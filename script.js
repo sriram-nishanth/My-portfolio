@@ -3,6 +3,62 @@ $(window).on("load", function() {
     loader.fadeOut(1000);
 });
 
+ScrollReveal().reveal('.header', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1200,
+    delay: 100,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    opacity: 0,
+    scale: 0.9,
+    rotate: { x: 0, y: 20, z: 0 },
+});
+
+
+ScrollReveal().reveal('.portfolio-container', {
+    origin: 'top',
+    distance: '60px',
+    duration: 1200,
+    delay: 200,
+    easing: 'ease-in-out',
+    opacity: 0,
+    scale: 0.95,
+    reset: true
+});
+
+ScrollReveal().reveal('.Skills', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1200,
+    delay: 300,
+    easing: 'ease-in-out',
+    opacity: 0,
+    scale: 0.9,
+    reset: true
+});
+
+ScrollReveal().reveal('.projects', {
+    origin: 'right',
+    distance: '80px',
+    duration: 1200,
+    delay: 400,
+    easing: 'ease-in-out',
+    opacity: 0,
+    scale: 0.92,
+    reset: true
+});
+
+ScrollReveal().reveal('.footer-content', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 1200,
+    delay: 500,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    opacity: 0,
+    scale: 0.95,
+    reset: true
+});
+
 function getResume() {
     const resume = document.getElementById("resume");
     if (resume) {

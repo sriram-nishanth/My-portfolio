@@ -405,8 +405,7 @@ body.no-scroll {
     width: 100%; /* Full width of the footer */
     background-color: var(--main-color); /* Background color for the footer */
     color: var(--text-color); /* Text color for the footer */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center the text */ /* Add padding for spacing */
     margin-top: 40px; /* Add spacing above the footer */
 }
 
@@ -436,7 +435,8 @@ body.no-scroll {
 
 .footer-content p {
     color: var(--text-color);
-    margin: 10px 0; /* Add spacing between paragraphs */
+    text-align: center;
+    margin: 10px 10px; /* Add spacing between paragraphs */
 }
 
 .footer-content .social-media {
@@ -449,7 +449,7 @@ body.no-scroll {
 
 @media (min-width: 320px) and (max-width: 768px) {
     body{
-       padding: 0%; /* Adjust padding for smaller screens */
+       padding: 0%; 
     }
     .normal{
         display: flex;
@@ -464,22 +464,18 @@ body.no-scroll {
         display: none;
     }
     .nav.active {
-        display: flex; /* Show nav when active */
-        flex-direction: column;
-    
-        align-items: stretch;
-        align-content: end; /* Stack nav items vertically */
-        position: fixed; /* Position it absolutely */
-        align-items: center;
-        top: 440px; /* Center vertically */
-        left: 50%;
-        z-index: 999;
-        height: 100%; /* Full height for the nav */
-        transform: translate(-50%, -50%);
-        width: 100%;/* Full height for the nav */ /* Full width for smaller screens */
-         gap: 80px;/* Adds spacing between items */
-        background-color: var(--main-color);
-        /* Smooth transition */
+     display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Center items vertically */       /* Center items horizontally */
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100vw;
+    gap: 70px;
+    background-color: var(--main-color);
+    transition: top 0.3s ease;
     }
     .header {
         position: sticky;
