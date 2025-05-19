@@ -226,7 +226,7 @@ a{
     position: relative;
     gap: 60px;
     flex-direction: row;
-    height: 100px;
+    height: 30vh;
     width: 100%;
 }
 .skillset .cards{
@@ -242,7 +242,7 @@ a{
      /* Changes background to black */ /* Changes text color to white */
     border-radius: 5px 5px; 
     padding: 10px;
-    transform: scale(1.1) translateY(-5px);
+    transform: scale(1.2) translateY(-5px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .skillset .React{
